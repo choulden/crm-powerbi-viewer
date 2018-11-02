@@ -223,7 +223,11 @@ class PowerBiViewerApp extends AppBase {
         embedConfig.pageName = viewConfig.pageName,
         embedConfig.settings = {
             filterPaneEnabled: viewConfig.showFilterPane,
-            navContentPaneEnabled: viewConfig.showNavPane
+            navContentPaneEnabled: viewConfig.showNavPane,
+            layoutType: models.LayoutType.Custom,
+            customLayout: {
+                displayOption: models.DisplayOption.FitToWidth
+            }
         } as IEmbedSettings;
 
         return embedConfig;
